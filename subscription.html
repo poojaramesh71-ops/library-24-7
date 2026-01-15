@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription | Study Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h2>Subscription</h2>
+    <nav>
+        <a href="./index.html">Home</a>
+    </nav>
+</header>
+
+<section class="subscription">
+    <div class="dark-overlay"></div>
+
+    <div class="subscription-box">
+        <h2>Monthly Subscription</h2>
+
+        <form onsubmit="submitForm(event)">
+
+            <!-- BIG INPUT BOXES -->
+            <input class="big-input" type="text" placeholder="Full Name" required>
+            <input class="big-input" type="email" placeholder="Email Address" required>
+            <input class="big-input" type="tel" placeholder="Mobile Number" required>
+
+            <select class="big-input" id="duration" onchange="updatePrice()" required>
+                <option value="">Select Duration</option>
+                <option value="1">1 Month – ₹500</option>
+                <option value="3">3 Months – ₹1500</option>
+                <option value="6">6 Months – ₹3000</option>
+                <option value="12">12 Months – ₹5000</option>
+            </select>
+
+            <div class="price-box">
+                Total Amount: ₹<span id="price">0</span>
+            </div>
+
+            <h3>Payment Methods</h3>
+            <div class="payment-boxes">
+                <label class="pay-card"><input type="radio" name="pay" required> UPI</label>
+                <label class="pay-card"><input type="radio" name="pay"> Debit Card</label>
+                <label class="pay-card"><input type="radio" name="pay"> Credit Card</label>
+                <label class="pay-card"><input type="radio" name="pay"> Cash</label>
+            </div>
+
+            <button type="submit" class="btn subscribe-btn">
+                Confirm Subscription
+            </button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 24×7 Study Library | Vijayapur</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
